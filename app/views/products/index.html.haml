@@ -1,0 +1,11 @@
+%h1 Product Listing
+
+%ul
+  - @products.each do |product|
+    %li
+      = "#{product.name} (#{format_money product.price})"
+      = button_to "Add to Cart", "#"
+
+      %blockquote
+        = product.description
+
